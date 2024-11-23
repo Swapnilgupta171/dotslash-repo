@@ -1,7 +1,7 @@
 # dotslash-repo   
 
 ## Welcome to the dotslash Hackathon Repository! - Digital Outlaws 🚀
-
+## Educational
 ### Instructions:
 - **Fork this repository**: Only one member from each team must fork this repository to their own GitHub account.
 - **Commit directly to your fork**: All submissions, code, and documentation must be committed to your fork. This repository will serve as your primary workspace during the hackathon.
@@ -74,7 +74,21 @@
 
 ## Code of Conduct
 
+
+
+
 By participating in this hackathon, you agree to follow the event’s Code of Conduct. Be respectful, inclusive, and ensure a positive experience for all participants.  
+
+#About Idea
+Revolutionizing Science Education for Rural Students: Virtual Labs for a Hands-On Experience!
+
+Relevance of the Problem & Impact: In rural areas, students often miss out on one of the most exciting parts of learning science: practical experiments. Without proper labs, they struggle to fully grasp key concepts. Our virtual lab bridges this gap, offering an interactive, hands-on learning experience, no matter where students are located. With our solution, they can experiment, learn, and explore just like their peers in well-equipped schools, unlocking their potential for a brighter future.
+
+Preliminary Research: Rural students face a major hurdle: a lack of infrastructure and resources for practical science education. Many schools rely on textbooks and theory, leaving practical knowledge out of reach. While there are a few digital alternatives, they often fall short in engagement and interactivity. That’s where our virtual lab comes in.
+
+Proposed Methodology & Innovation: Imagine conducting science experiments at the click of a button! Our platform offers interactive 3D simulations for Physics, Chemistry, and Biology experiments, designed to replicate real-life scenarios. No special hardware is required—students just need an internet connection. With intuitive step-by-step guides, real-time feedback, and the ability to analyze results, learning becomes an adventure rather than a chore. Plus, built-in quizzes ensure that students not only perform but also understand the science behind each experiment.
+
+Team Collaboration & Planning: Our talented team of developers, educators, and designers is dedicated to creating a seamless, engaging experience. Using cutting-edge web technologies like Three.js, HTML5, and JavaScript, we’ll deliver an interactive lab that runs smoothly on all devices. Starting small with core experiments, we’ll gradually expand our virtual offerings, ensuring that students are always challenged, always learning, and always engaged.
 
 For any queries or support, feel free to contact the organizing team.  The full code of conduct can be found at [Fest Website](https://www.fitoorxprayas.in/rules)
 
