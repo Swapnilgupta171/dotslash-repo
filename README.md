@@ -1,6 +1,6 @@
-# dotslash-repo
+# dotslash-repo   
 
-## Welcome to the dotslash Hackathon Repository! 🚀
+## Welcome to the dotslash Hackathon Repository! - Digital Outlaws 🚀
 
 ### Instructions:
 - **Fork this repository**: Only one member from each team must fork this repository to their own GitHub account.
