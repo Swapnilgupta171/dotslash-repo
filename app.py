@@ -1,42 +1,48 @@
-import spacy
+import openai
 
-# Load the small English model for spaCy
-nlp = spacy.load("en_core_web_sm")
+# Set up OpenAI API key
+openai.api_key = "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"
 
-# Example Context Dictionary (this is a simplified version)
-context_dict = {
-    "I": "general",
-    "feeling": "sad",
-    "good": "general",
-    "down": "sad",
-    "Earth": "geography",
-    "crust": "geography",
-    "core": "geography",
-    "challenge": "general"
-}
+def classify_sentence(sentence):
+    """
+    Classifies the words in a sentence based on their context using OpenAI GPT models.
+    """
+    prompt = f"""
+    Classify the words in the following sentence based on their context. 
+    Append a category to each word (e.g., 'geography', 'general', etc.), and remove unnecessary or common words.
 
-def context_based_word_identification(sentence):
-    # Process the input sentence with spaCy
-    doc = nlp(sentence)
+    Sentence: "{sentence}"
+
+    Return the output as a list of words with their category.
+    """
+    try:
+        # Use gpt-3.5-turbo model with ChatCompletion API
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": "You are an assistant that classifies words based on their context."},
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=100,
+            temperature=0.7
+        )
+        # Extract and return the model's response
+        return response['choices'][0]['message']['content'].strip()
+    except Exception as e:
+        return f"Error: {e}"
+
+def main():
+    print("Welcome to Context-Based Word Classifier!")
+    print("Enter a sentence to classify words based on their context. Type 'exit' to quit.")
     
-    result = []
-    
-    for token in doc:
-        word = token.text
-        # Check if the word exists in our context dictionary
-        if word.lower() in context_dict:
-            result.append(f"{word.lower()}_{context_dict[word.lower()]}")
-        else:
-            # If no context is found, append as a general word
-            result.append(f"{word.lower()}_general")
-    
-    return result
+    while True:
+        user_input = input("Enter a sentence: ")
+        if user_input.lower() == 'exit':
+            print("Exiting the program. Goodbye!")
+            break
+        
+        result = classify_sentence(user_input)
+        print(f"Classified Output: {result}")
 
-# Test Cases
-input1 = "I am not feeling too good today"
-output1 = context_based_word_identification(input1)
-print(f"Input: {input1}\nOutput: {output1}\n")
-
-input2 = "Earth’s crust and core"
-output2 = context_based_word_identification(input2)
-print(f"Input: {input2}\nOutput: {output2}")
+if __name__ == "__main__":
+    main()
